@@ -1,0 +1,676 @@
+<!--- start of script !--->
+<HTML>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="SNU_Comittee_Favicon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><!--<script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+</head>
+<HEAD>
+<meta>
+	<meta charset="UTF-16">
+</meta>
+<style>
+/* Sourcebase CSS starter file
+Version 1.01 (September 27th 2019 build)
+Most recent: 1.01 (September 27th 2019 build)
+CSS starter script
+*/
+/* Start of stylesheet rules */
+/* Grid system */
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* Transparent boxes */
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+div.transbox {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+div.transbox p {
+  margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Sidebar */
+body {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+/* Topbar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Headings */
+H1 {
+	color: black;
+}
+H2 {
+	color: black;
+}
+H3 {
+	color: black;
+}
+H4 {
+	color: black;
+}
+H5 {
+	color: black;
+}
+H6 {
+	color: black;
+}
+/* Dividers, paragraphs */
+HR {
+	color: black;
+}
+p {
+	color: black;
+}
+/* Other rich text */
+i {
+	color: black;
+}
+u {
+	color: black;
+}
+b {
+	color: black;
+}
+s {
+	color: black;
+}
+sub {
+	color: black;
+}
+sup {
+	color: black;
+}
+/* Details and summary */
+details {
+	color: black;
+}
+summary {
+	color: black;
+}
+/* Progress bar 
+/* Option 1 */
+progress {
+	display:inline-block;
+	width:190px;
+	height:20px;
+	padding:15px 0 0 0;
+	margin:0;
+	background:none;
+	border: 0;
+	border-radius: 15px;
+	text-align: left;
+	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:11px;
+	width:150px;
+	margin:0 auto;
+	background-color: #CCC;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:11px;
+	margin:0px -10px 0 0;
+	background: #F70;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress:after {
+	margin:-26px 0 0 -7px;
+	padding:0;
+	display:inline-block;
+}
+/* Option 2 */
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+/* Option 3 */
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+/* Option 4 */
+/* Step 1 */
+progress,          /* All HTML5 progress enabled browsers */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+}
+/* Step 2 */
+/* IE10 */
+progress {
+    color: black;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: black;  
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: black;
+}
+/* Step 3 */
+progress[value^="9"]::-moz-progress-bar {
+background-color : red;
+}
+/* 
+More CSS - Blackboard kit
+blackboard kit 
+Version 1
+*/
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* WebGL compatibility layer */
+canvas {
+	border: 2px solid black;
+	background-color: black;
+}
+video {
+	display: none;
+}
+/* Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Border image */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+/* end of stylesheet */
+/* End of stylesheet rules */
+/* Description
+None
+*/
+/* Statistics
+Character count: 07,.349 characters (07,.349 bytes) (07,.349 Kilobytes)
+Line count: 0,.456
+File type: *.css (Cascade Styling Sheets)
+Language: CSS (Cascade Styling Sheets)
+Version: 2 (September 27th 2019)
+Latest version: 2 (September 27th 2019)
+First version: 1 (September 26th 2019)
+*/
+</style>
+<?
+// PHP section
+?>
+<script>
+console.log("SNU web console for [browser]");
+console.log("The [section] console");
+console.log(">>>");
+</script>
+<script>
+// Committee count
+console.log("Committee count: ");
+/*int x1 = 4; // Governing committees
+int x2 = 1; // Content committees
+int x3 = 2; // Adult content committees
+int x4 = 1; // Video committees
+int x5 = 2; // Maintenance committees
+int x6 = 1; // Document committees
+int x7 = 1; // Audio committees
+*/
+var y1 = 4;
+var y2 = 1;
+var y3 = 2;
+var y4 = 1;
+var y5 = 2;
+var y6 = 1;
+var y7 = 1;
+// 12, still learning JS (not valid syntax)
+/* Edit 6:52 pm, Common mistake, I used "int" instead of "var" this is the problem when you know the basic syntax of over a dozen languages */
+/*console.log(4 + 1 + 2 + 1 + 2 + 1 + 1);*/
+// Or (coming soon, when I can fix this JS)
+/*console.log("x1-x7 is not defined as the values have been commented out");*/
+console.log(y1 + y2 + y3 + y4 + y5 + y6 + y7);
+// console.log(x1 + x2 + x3 + x4 + x5 + x6 + x7);
+</script>
+<TITLE>SNU Committee hall - The SNU Public Government</TITLE> <!-- Page title !-->
+</HEAD>
+<BODY BGCOLOR="NAVY"> <!-- Background color !-->
+<!-- Brief color list
+Black (000000)
+White (FFFFFF)
+Cyan (00FFFF)
+Navy (000080)
+Dark grey (333333)
+Light grey (777777)
+Red (FF0000)
+Green (00FF00)
+Turquiose (40E0D0)
+!-->
+<BODY BACKGROUND=".png"> <!-- Background image !--> <!-- Allowed formats: .png .jpg .jpe .jif .gif .bmp .dib .tif .tiff !-->
+<!-- Top navigation bar !-->
+<div class="topnav">
+<a class="active" href="">[SNU Committee hall]</a>
+<a href="#PLACEHOLDER">(</a>
+<a href="#">[]</a>
+<a href="#PLACEHOLDER">)</a>
+</div> 
+<!-- Top navigation bar !-->
+<!-- Divider !-->
+<!-- Sidebar !-->
+<ul>
+	<img src="SNU_Comittee_Favicon.ico" alt="Logo.Profile_Icon" width="225" height="225">
+	<li><a class="active" href="#home">SNU Committee hall</a></li>
+	<HR>
+	<li><a href="#EXPLORE">[List of committees]</a></li>
+	<li><HR></li>
+	<details><summary><li id="">Image</li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">Video</li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">Audio</li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">Maintenance</li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">Other</li></summary>
+	<li><a href=".html">Link 1</a></li>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">Page navigation</summary>
+	<li><a href="#SnapshotSection">Snapshot section</a></li>
+	</details>
+	<li><HR></li>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<!-- End of sidebar and topbar section !-->
+<HR>
+<header>
+<H1>SNU Committee board</H1>
+<H2>Not to be confused with the SNU government</H2>
+<H3><a href="../Government/SNU_GovernmentHomePage.html">Click here to go to the SNU government home page</a></H3><!-- Link checked 12.02.2019 - Link works! !-->
+</header>
+<HR>
+<section>
+<H1>Governing committees (4)</H1>
+<H2><a href="!Master/MasterCommittee.html">Master committee (top-level)</a></H2><!-- Link checked 12.02.2019 - Link works! !-->
+<H2><a href="Copyright/CopyrightCommittee.html">Copyright committee (manages copyright issues)</a></H2><!-- Link checked 12.02.2019 - Link works! !-->
+<H2><a href="Universal/Universal_And_Foreign_Committee.html">Universal/foreign relations committee</a></H2><!-- Link checked 12.02.2019 - Link works! !-->
+<H2><a href="Every/EveryonesVoice_Committee.html">Public committee (everyone has a voice)</a></H2><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<section>
+<H2>Content committees (1)</H2>
+<H3>Images</H3>
+<H4><a href="ImageTypes/ImageFormatCommittee.html">Image formatting committee (manages image format data, metadata, types, and content)</a></H4><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<section>
+<H2>Adult content committees (2)</H2>
+<H3><a href="AntiCP/AntiCPTeam_Committee.html">Anti-child pornography committee (makes algorithmic decisions to eliminate the uploading of child pornography to SNU</a></H3><!-- Link checked 12.02.2019 - Link works! !-->
+<H3><a href="ConsentSys/ConsentCommittee.html">Consent registration committee (confirms consent between partners to prevent rape videos from being uploaded to SNU)</a></H3><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<section>
+<H3>Video (1)</H3>
+<H4><a href="VideoTypes/VideoFormatCommittee.html">Video formatting committee (manages video format data, metadata, types, and content)</a></H4><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<section>
+<H2>Maintenance committees (2)</H2>
+<H3>Algorithms <button><a href="Maintenance/AlgorithmCommittee.html">Click here to view</a></button></H3><!-- Link checked 12.02.2019 - Link works! !-->
+<H3>Security <button><a href="Maintenance/SecurityCommittee.html">Click here to view</a></button></H3><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<section>
+<H3>Document (1)</H3>
+<H4><a href="Document/DocumentFormatCommittee.html">Document formatting committee (manages document format data, metadata, types, and content)</a></H4><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<section>
+<H3>Audio (1)</H3>
+<H4><a href="AudioTypes/AudioFormatCommittee.html">Audio formatting committee (manages audio format data, metadata, types, and content)</a></H4><!-- Link checked 12.02.2019 - Link works! !-->
+</section>
+<HR>
+<!--
+Obsolete notes (as of December 2nd 2019 (might be removed in future update)
+<H2>Developer notes</H2>
+<H1>Developers note 11.28.2019: I am having some issues tonight, and I couldn't produce the full update to this page. I will try harder tomorrow.</H1>
+<H1>Developers note 11.30.2019: The committee system really threw me off, it is difficult to think of how to make this work. I am trying to figure this out day by day</H1>
+<H1>Developers note 12.01.2019: I have finally figured it out. This section will be commented out in the next page update</H1>
+<HR>
+!-->
+<article>
+<H1>Constitution V1.02 - December 6th 2019</H1>
+<H2>Most recent version of constitution must be used under any circumstance until specified (it is in a working draft)</H2>
+<H3>Distro rules</H3>
+<p>SNU distributions cannot use the committee system in their own distributions. It can only be used in the main distribution</p>
+<p>SNU distributions cannot invade user privacy. Invasion of user privacy and data collection by distributions will result in repeated fines at the highest level of the law</p>
+<p>SNU distributions cannot be used in a monopolistic fashion, you must make room for competition, and not prevent users from switching over to other distributions</p>
+<p>SNU distributions cannot contain DRM</p>
+<p>SNU distributions must be open source, except for closed source content stored on the site. With this, the public must be able to copy the source of the entire site when they want without requesting.</p>
+<H3>Management</H3>
+<p>SNU can be run in any country on any planet, no country can be denied access to owning a SNU distribution.</p>
+<H3>Privacy</H3>
+<p>Data collection on SNU distributions is prohibited. Collection of sensitive personal data is illegal, and will result in intense legal fines even to the point of bankruptcy.</p>
+<p>Users must consent to all data collection requested without reading terms of service, or without it being flashed on them (the message has to appear for at least 180 seconds per viewing)</p>
+<p>Certain data collection cannot be done even with consent. This certain data includes "medical records" "social security and other sensitive bank details"</p>
+<p>Location data can be collected only when the user gives consent, and consent has to be given each time. Location data is important for features such as GPS data.</p>
+<p>Malicious trackers and cryptominers are not allowed to be displayed on SNU.</p>
+<H3>Constitution updates</H3>
+<p>Constitution updates must be kept fair and simple. Principal rules cannot be revoked by anyone.</p>
+</article>
+<HR>
+<section>
+<details><summary><H2 id="SnapshotSection">View older versions of this page</H2></summary>
+<H3>Snapshots 1 to 10</H3>
+<H4><button><a href="SNU_Committee_Hall_Snapshot1.html">Snapshot 1 (November 28th 2019)</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot2.html">Snapshot 2 (November 30th 2019)</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot3.html">Snapshot 3 (December 1st 2019)</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot4.html">Snapshot 4 (December 2nd 2019)</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot5.html">Snapshot 5 (December 6th 2019)</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot6.html">Snapshot 6</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot7.html">Snapshot 7</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot8.html">Snapshot 8</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot9.html">Snapshot 9</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot10.html">Snapshot 10</a></button></H4>
+<H3>Snapshots 11 to 20</H3>
+<H4><button><a href="SNU_Committee_Hall_Snapshot11.html">Snapshot 11</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot12.html">Snapshot 12</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot13.html">Snapshot 13</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot14.html">Snapshot 14</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot15.html">Snapshot 15</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot16.html">Snapshot 16</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot17.html">Snapshot 17</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot18.html">Snapshot 18</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot19.html">Snapshot 19</a></button></H4>
+<H4><button><a href="SNU_Committee_Hall_Snapshot20.html">Snapshot 20</a></button></H4>
+</details>
+</section>
+<HR>
+<!--Divider!-->
+<H1>You have reached the bottom of this page.</H1>
+<HR>
+<footer>
+<p>Footer is not set up properly yet</p>
+</footer>
+</HR>
+</BODY>
+<!-- This page was built off the basis of SNU Sourcebase HTML scriptstarter 1.03 !-->
+</HTML>
+<!--- end of script !--->
